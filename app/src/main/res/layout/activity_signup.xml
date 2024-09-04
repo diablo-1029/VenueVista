@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkpink"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="100dp"
+        android:text="VenueVista"
+        android:fontFamily="@font/bree_serif"
+        android:textColor="@color/darkpink"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textColor="@color/darkpink"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_condensed"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:padding="10dp"
+        android:background="@drawable/rounded_corner2"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/email_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address"
+        android:textColor="@color/black"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_condensed"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:padding="10dp"
+        android:background="@drawable/rounded_corner2"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:layout_marginTop="440dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_condensed"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:padding="10dp"
+        android:background="@drawable/rounded_corner2"
+        android:layout_marginTop="465dp"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/confirm_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password"
+        android:textColor="@color/black"
+        android:layout_marginTop="530dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_condensed"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:padding="10dp"
+        android:background="@drawable/rounded_corner2"
+        android:layout_marginTop="555dp"
+        android:layout_marginLeft="50dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:fontFamily="@font/roboto_condensed"
+        android:layout_marginTop="610dp"
+        android:layout_marginLeft="50dp" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkpink"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:textColorHint="@color/white"
+        android:background="@drawable/rounded_corner"
+        android:padding="18dp"
+        android:hint="Username" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@color/white"
+        android:background="@drawable/rounded_corner"
+        android:padding="18dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/Signup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="250dp"
+        android:textColor="@color/white"
+        android:text="Sign up"
+        android:fontFamily="@font/roboto_condensed"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="VenueVista"
+        android:layout_marginLeft="95dp"
+        android:textColor="@color/white"
+        android:textSize="32dp" />
+
+
+</RelativeLayout>
