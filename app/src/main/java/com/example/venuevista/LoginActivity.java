@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,12 +24,11 @@ public class LoginActivity extends AppCompatActivity {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 // Handle login logic here
-                // For demonstration, we'll just start SignupActivity
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                // navigate signup, we'll just start SignupActivity
+                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
                 startActivity(intent);
             }
         });
-
 
     }
 }

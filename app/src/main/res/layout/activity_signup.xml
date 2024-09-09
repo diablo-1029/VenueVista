@@ -112,10 +112,10 @@
         android:layout_marginLeft="50dp"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go"
+        android:text="Login"
         android:fontFamily="@font/roboto_condensed"
         android:layout_marginTop="610dp"
         android:layout_marginLeft="50dp" />
