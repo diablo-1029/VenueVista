@@ -40,6 +40,16 @@
         android:fontFamily="@font/roboto_condensed"
         android:textSize="20sp"/>
 
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="250dp"
+        android:fontFamily="@font/roboto_condensed"
+        android:text="Go"
+        android:textSize="20sp"/>
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"

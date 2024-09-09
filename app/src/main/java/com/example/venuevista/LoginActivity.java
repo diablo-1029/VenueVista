@@ -16,8 +16,8 @@ public class LoginActivity extends AppCompatActivity {
 
         EditText usernameEditText = findViewById(R.id.username);
         EditText passwordEditText = findViewById(R.id.password);
-        Button SignupButton = findViewById(R.id.Signup_button);
 
+        Button SignupButton = findViewById(R.id.Signup_button);
         SignupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +29,17 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //if login is successful make navigation for homepage button
+        Button homebutton = findViewById(R.id.home_button);
+        homebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //add signup textview
+                // navigate homepage
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent); // This starts the LoginActivity
+                finish();//close LoginActivity
+            }
+        });
     }
 }

@@ -13,16 +13,28 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_signup);
 
-        Button Loginbutton = findViewById(R.id.Login_button);
 
-        Loginbutton.setOnClickListener(new View.OnClickListener() {
+        Button backLoginbutton = findViewById(R.id.Login_button);
+        backLoginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //navigate back to login
                 Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                 startActivity(intent);
+                finish();//close SignupActivity
             }
         });
+        Button SignupButton = findViewById(R.id.Signup_button);
+        SignupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //add signup textview
+                //navigate homepage
+                Intent intent = new Intent(SignupActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();//close SignupActivity
 
+            }
+        });
     }
 }

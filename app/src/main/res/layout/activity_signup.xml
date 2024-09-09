@@ -112,6 +112,18 @@
         android:layout_marginLeft="50dp"/>
 
     <Button
+        android:id="@+id/Signup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="250dp"
+        android:textColor="@color/white"
+        android:text="Sign up"
+        android:fontFamily="@font/roboto_condensed"
+        android:textSize="20sp"/>
+
+    <Button
         android:id="@+id/Login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

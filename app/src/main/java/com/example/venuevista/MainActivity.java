@@ -19,18 +19,19 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        Button buttonButton = findViewById(R.id.button);
+        Button buttonButton = findViewById(R.id.home_button);
         TextView chooseTextView = findViewById(R.id.choose);
         TextView choose1TextView = findViewById(R.id.choose1);
         TextView choose2TextView = findViewById(R.id.choose2);
         TextView choose3TextView = findViewById(R.id.choose3);
 
-        Button button = findViewById(R.id.button); // Make sure you have the correct button ID
-        button.setOnClickListener(new View.OnClickListener() {
+        Button Main2button = findViewById(R.id.main2_button);
+        Main2button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent); // This starts the LoginActivity
+                //navigate to Main2Activity
+                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent);
             }
         });
 
