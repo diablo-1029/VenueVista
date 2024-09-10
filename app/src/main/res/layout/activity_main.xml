@@ -11,7 +11,7 @@
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/darkpink"/>
+        android:background="@color/lightblue"/>
 
     <Button
         android:id="@+id/main2_button"
@@ -39,7 +39,7 @@
         android:layout_marginTop="100dp"
         android:text="VenueVista"
         android:fontFamily="@font/bree_serif"
-        android:textColor="@color/darkpink"
+        android:textColor="@color/lightblue"
         android:textSize="32sp" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:textSize="19sp"
         android:text="Venue"
         android:fontFamily="@font/roboto"
-        android:textColor="@color/darkpink"
+        android:textColor="@color/lightblue"
         android:layout_marginTop="160dp"/>
 
     <TextView

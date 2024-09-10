@@ -5,40 +5,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private EditText usernameEditText;
+    private EditText passwordEditText;
+    private Button loginButton;
+    private TextView signupLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        EditText usernameEditText = findViewById(R.id.username);
-        EditText passwordEditText = findViewById(R.id.password);
+         usernameEditText = findViewById(R.id.username);
+         passwordEditText = findViewById(R.id.password);
+         loginButton = findViewById(R.id.login_button);
+         signupLink = findViewById(R.id.signup_link);
 
-        Button SignupButton = findViewById(R.id.Signup_button);
-        SignupButton.setOnClickListener(new View.OnClickListener() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = usernameEditText.getText().toString();
-                String password = passwordEditText.getText().toString();
                 // Handle login logic here
-                // navigate signup, we'll just start SignupActivity
-                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
-                startActivity(intent);
             }
         });
-        //if login is successful make navigation for homepage button
-        Button homebutton = findViewById(R.id.home_button);
-        homebutton.setOnClickListener(new View.OnClickListener() {
+        signupLink.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                //add signup textview
-                // navigate homepage
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent); // This starts the LoginActivity
-                finish();//close LoginActivity
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/darkpink"/>
+        android:background="@color/lightblue"/>
 
     <TextView
         android:id="@+id/textView"
@@ -17,7 +18,7 @@
         android:layout_marginTop="100dp"
         android:text="VenueVista"
         android:fontFamily="@font/bree_serif"
-        android:textColor="@color/darkpink"
+        android:textColor="@color/lightblue"
         android:textSize="32sp" />
 
     <TextView
@@ -25,113 +26,71 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Signup"
-        android:textColor="@color/darkpink"
+        android:textColor="@color/lightblue"
         android:layout_marginTop="200dp"
         android:layout_marginLeft="40dp"
         android:textSize="20sp"
         android:fontFamily="@font/roboto"/>
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/signup_username"
+        android:layout_centerHorizontal="true"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:text="Name"
-        android:textColor="@color/black"
-        android:layout_marginTop="250dp"
-        android:layout_marginLeft="50dp"
-        android:textSize="15sp"
-        android:fontFamily="@font/roboto_condensed"/>
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/signup"
+        android:textColorHint="@color/grey"
         android:background="@drawable/rounded_corner2"
-        android:layout_marginTop="290dp"
-        android:layout_marginLeft="50dp"/>
+        android:padding="18dp"
+        android:hint="Username" />
 
-    <TextView
-        android:id="@+id/email_address"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/signup_email"
+        android:layout_centerHorizontal="true"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:text="Email Address"
-        android:textColor="@color/black"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="50dp"
-        android:textSize="15sp"
-        android:fontFamily="@font/roboto_condensed"/>
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/signup_username"
+        android:textColorHint="@color/grey"
         android:background="@drawable/rounded_corner2"
-        android:layout_marginTop="380dp"
-        android:layout_marginLeft="50dp"/>
+        android:padding="18dp"
+        android:hint="Email" />
 
-    <TextView
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/signup_password"
+        android:layout_centerHorizontal="true"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:text="Password"
-        android:textColor="@color/black"
-        android:layout_marginTop="440dp"
-        android:layout_marginLeft="50dp"
-        android:textSize="15sp"
-        android:fontFamily="@font/roboto_condensed"/>
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:padding="10dp"
+        android:layout_below="@id/signup_email"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/grey"
         android:background="@drawable/rounded_corner2"
-        android:layout_marginTop="465dp"
-        android:layout_marginLeft="50dp"/>
+        android:padding="18dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/confirm_password"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/signup_confirm_password"
+        android:layout_centerHorizontal="true"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:text="Confirm Password"
-        android:textColor="@color/black"
-        android:layout_marginTop="530dp"
-        android:layout_marginLeft="50dp"
-        android:textSize="15sp"
-        android:fontFamily="@font/roboto_condensed"/>
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:padding="10dp"
+        android:layout_below="@id/signup_password"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/grey"
         android:background="@drawable/rounded_corner2"
-        android:layout_marginTop="555dp"
-        android:layout_marginLeft="50dp"/>
+        android:padding="18dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/Signup_button"
+        android:id="@+id/signup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="250dp"
-        android:textColor="@color/white"
-        android:text="Sign up"
+        android:text="Signup"
+        android:layout_below="@id/signup_confirm_password"
         android:fontFamily="@font/roboto_condensed"
-        android:textSize="20sp"/>
-
-    <Button
-        android:id="@+id/Login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:fontFamily="@font/roboto_condensed"
-        android:layout_marginTop="610dp"
-        android:layout_marginLeft="50dp" />
-
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
 
 
 </RelativeLayout>
