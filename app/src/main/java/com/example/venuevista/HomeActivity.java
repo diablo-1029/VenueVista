@@ -24,7 +24,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         searchBar = findViewById(R.id.search_bar);
-        viewNav = findViewById(R.id.view_nav);
         profileButton = findViewById(R.id.profile_button);
         homeContent = findViewById(R.id.home_content);
 

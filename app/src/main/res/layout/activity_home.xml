@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
     xmlns:tools="http://schemas.android.com/tools">
 
     <Toolbar
@@ -20,7 +22,7 @@
         android:inputType="text"
         android:background="@drawable/rounded_corner2"
         android:drawableEnd="@drawable/baseline_search_24"
-        android:padding="10dp"/>
+        android:padding="7dp"/>
 
 
     <ImageButton
@@ -40,6 +42,111 @@
         android:layout_below="@id/search_bar"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Home"
+        android:text="Discover"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/home_discover"
+        android:textColor="@color/lightblue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="16dp"
+        android:text="Discover"
+        android:textSize="18sp" />
+
+    <!--boxes-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/box1"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/home_discover"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="-172dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="20dp">
+
+        <!--CONTENT inside the box of image and textview-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!--image inside the cardview-->
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_gravity="center"
+                android:contentDescription="OUTING"
+                android:scaleType="centerCrop"
+                android:src="@drawable/outing" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="OUTING"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/more_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/box1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="200dp"
+        android:text="More Package"
+        android:textColor="@color/lightblue"
+        android:textSize="18sp" />
+
+<!--boxes-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/box2"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/more_package"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="-172dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="20dp">
+
+        <!--CONTENT inside the box of image and textview-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!--image inside the cardview-->
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_gravity="center"
+                android:contentDescription="OUTING"
+                android:scaleType="centerCrop"
+                android:src="@drawable/outing" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="OUTING"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
 </RelativeLayout>
