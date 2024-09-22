@@ -30,6 +30,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle login logic here
+                Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                startActivity(intent);
+                finish();//to close the login and go to home
             }
         });
         signupLink.setOnClickListener(new View.OnClickListener() {

@@ -29,7 +29,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="520dp"
         android:fontFamily="@font/roboto_condensed"
-        android:text="Go" />
+        android:text="Continue" />
 
     <TextView
         android:id="@+id/textView"

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:id="@+id/scroll_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/blue"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <Toolbar
         android:layout_width="match_parent"
@@ -22,7 +28,7 @@
         android:inputType="text"
         android:background="@drawable/rounded_corner2"
         android:drawableEnd="@drawable/baseline_search_24"
-        android:padding="7dp"/>
+        android:padding="9dp"/>
 
 
     <ImageButton
@@ -43,7 +49,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:text="Discover"
-        android:textSize="18sp" />
+        android:textSize="15sp"
+        android:fontFamily="@font/righteous_regular"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/home_discover"
@@ -53,8 +61,9 @@
         android:layout_below="@id/home_content"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="16dp"
-        android:text="Discover"
-        android:textSize="18sp" />
+        android:text="Available Spaces"
+        android:textSize="15sp"
+        android:fontFamily="@font/righteous_regular"/>
 
     <!--boxes-->
     <androidx.cardview.widget.CardView
@@ -73,7 +82,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@color/blue">
 
             <!--image inside the cardview-->
             <ImageView
@@ -92,7 +102,8 @@
                 android:gravity="center"
                 android:text="OUTING"
                 android:textSize="18sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -103,9 +114,10 @@
         android:layout_below="@id/box1"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="200dp"
-        android:text="More Package"
+        android:text="More Packages"
         android:textColor="@color/lightblue"
-        android:textSize="18sp" />
+        android:textSize="15sp"
+        android:fontFamily="@font/righteous_regular"/>
 
 <!--boxes-->
     <androidx.cardview.widget.CardView
@@ -124,7 +136,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@color/blue">
 
             <!--image inside the cardview-->
 
@@ -142,11 +155,102 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="OUTING"
+                android:text="BIRTHDAY/DEBUT"
                 android:textSize="18sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed"/>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 
-</RelativeLayout>
+    <!--boxes-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/box3"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/box2"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="-172dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="20dp">
+
+        <!--CONTENT inside the box of image and textview-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/blue"
+            >
+
+            <!--image inside the cardview-->
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_gravity="center"
+                android:contentDescription="OUTING"
+                android:scaleType="centerCrop"
+                android:src="@drawable/outing" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="WEDDING"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--boxes-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/box4"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/box3"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="-172dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="20dp">
+
+        <!--CONTENT inside the box of image and textview-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/blue"
+            >
+
+            <!--image inside the cardview-->
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_gravity="center"
+                android:contentDescription="OUTING"
+                android:scaleType="centerCrop"
+                android:src="@drawable/outing" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="WEDDING"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_condensed"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>
