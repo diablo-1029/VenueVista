@@ -1,66 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
+    android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/username"
+    <!-- ImageView for Logo -->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Login Logo"
+        android:src="@drawable/venue" />
+
+    <!-- Empty top half -->
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:textColorHint="@color/white"
-        android:background="@drawable/rounded_corner"
-        android:padding="18dp"
-        android:hint="Username" />
+        android:layout_height="0dp"
+        android:layout_weight="0.1" />  <!-- Empty top half -->
 
-    <EditText
-        android:id="@+id/password"
+
+    <!-- Bottom half -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/username"
-        android:layout_marginTop="40dp"
-        android:textColorHint="@color/white"
-        android:background="@drawable/rounded_corner"
-        android:padding="18dp"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/login_rounded_corner">
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="250dp"
-        android:textColor="@color/white"
-        android:text="Login"
-        android:fontFamily="@font/roboto_condensed"
-        android:textSize="20sp"/>
+        <!-- Text inside the rounded half screen -->
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Username"
+            android:padding="18dp"
+            android:textColorHint="@color/white"
+            android:inputType="textEmailAddress"/>
 
-    <TextView
-        android:id="@+id/signup_link"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/login_button"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        android:layout_marginTop="10dp"
-        android:text="Don't have an account? Sign up"
-        android:paddingTop="16dp" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:textColorHint="@color/white" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/bree_serif"
-        android:text="VenueVista"
-        android:layout_marginLeft="95dp"
-        android:textColor="@color/white"
-        android:textSize="32dp" />
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="200dp"
+            android:fontFamily="@font/roboto_condensed"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/button_background"/>
 
+        <TextView
+            android:id="@+id/signup_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="20dp"
+            android:paddingTop="16dp"
+            android:text="Don't have an account? Sign up"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
 
-</RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

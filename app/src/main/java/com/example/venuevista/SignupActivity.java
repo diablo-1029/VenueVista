@@ -32,9 +32,9 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle sign-up logic here
-                Intent intent = new Intent(SignupActivity.this,HomeActivity.class);
+                Intent intent = new Intent(SignupActivity.this,MainActivity.class);
                 startActivity(intent);
-                finish();//to close the signup and go on homeactivity
+                finish();//to close the signup and go on mainactivity
             }
         });
     }
