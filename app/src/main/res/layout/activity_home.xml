@@ -92,7 +92,9 @@
                 android:layout_gravity="center"
                 android:contentDescription="OUTING"
                 android:scaleType="centerCrop"
-                android:src="@drawable/outing" />
+                android:src="@drawable/outing"
+                android:clickable="true"
+                android:focusable="true"/>
 
             <TextView
                 android:layout_width="wrap_content"

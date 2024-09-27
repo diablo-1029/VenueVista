@@ -6,20 +6,28 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- ImageView for Logo -->
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:contentDescription="Login Logo"
-        android:src="@drawable/venue" />
+
+
+    <!-- Logo TextView -->
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VenueVista"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
 
     <!-- Empty top half -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.1" />  <!-- Empty top half -->
+        android:layout_weight="0.3" />  <!-- Empty top half -->
+
 
 
     <!-- Bottom half -->
@@ -54,6 +62,17 @@
             android:padding="18dp"
             android:textColorHint="@color/white" />
 
+        <ImageView
+            android:id="@+id/toggle_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="137dp"
+            android:layout_marginLeft="300dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/baseline_visibility_off_24" />
+
+
         <Button
             android:id="@+id/login_button"
             android:layout_width="wrap_content"
@@ -64,18 +83,35 @@
             android:text="Login"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:background="@drawable/button_background"/>
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/lighterblue" />
 
-        <TextView
-            android:id="@+id/signup_link"
+       <!--For bold letter-->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
-            android:layout_marginLeft="20dp"
-            android:paddingTop="16dp"
-            android:text="Don't have an account? Sign up"
-            android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="170dp"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/signup_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
 
     </FrameLayout>
 

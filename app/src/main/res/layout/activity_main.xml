@@ -6,6 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <Toolbar
@@ -43,7 +44,7 @@
         android:textSize="32sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/venue_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -53,16 +54,6 @@
         android:textColor="@color/lightblue"
         android:layout_marginTop="160dp"/>
 
-    <TextView
-        android:id="@+id/vista_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="265dp"
-        android:textSize="19sp"
-        android:text="Vendor"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/grey"
-        android:layout_marginTop="160dp"/>
 
     <TextView
         android:id="@+id/category"
@@ -115,7 +106,8 @@
         android:layout_marginTop="350dp"
         android:background="@drawable/rounded_corner2"
         android:padding="10dp"
-        android:hint="dd/mm/yy" />
+        android:hint="dd/mm/yy"
+        android:textColorHint="@color/grey"/>
 
     <EditText
         android:id="@+id/choose2"
@@ -125,7 +117,8 @@
         android:layout_marginTop="350dp"
         android:background="@drawable/rounded_corner2"
         android:padding="10dp"
-        android:hint="dd/mm/yy" />
+        android:hint="dd/mm/yy"
+        android:textColorHint="@color/grey"/>
 
     <TextView
         android:id="@+id/location"

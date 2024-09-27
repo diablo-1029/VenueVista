@@ -26,6 +26,7 @@
         <activity android:name=".Main2Activity"/>
         <activity android:name=".HomeActivity"/>
         <activity android:name=".ProfileActivity"/>
+        <activity android:name=".SelectPackageActivity"/>
     </application>
 
 </manifest>

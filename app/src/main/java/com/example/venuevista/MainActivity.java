@@ -14,7 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView vistaPage;
     private TextView homeButton;
 
     @SuppressLint("MissingInflatedId")
@@ -24,9 +23,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        vistaPage = findViewById(R.id.vista_page);
-        homeButton =findViewById(R.id.home_button);
         Button Main2button = findViewById(R.id.main2_button);
+        homeButton =findViewById(R.id.home_button);
 
         Main2button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,13 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        vistaPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
 
