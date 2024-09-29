@@ -9,13 +9,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ImageView;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
     private EditText searchBar;
     private ImageButton profileButton;
-    private TextView homeContent;
-    private ScrollView scrollView;
     private ImageView image1;
 
     @Override
@@ -26,9 +26,8 @@ public class HomeActivity extends AppCompatActivity {
         // Initialize all the views
         searchBar = findViewById(R.id.search_bar);
         profileButton = findViewById(R.id.profile_button);
-        homeContent = findViewById(R.id.home_content);
-        scrollView = findViewById(R.id.scroll_view);
         image1 = findViewById(R.id.image1);
+
 
         image1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,10 +47,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // ScrollView section
-        // Optionally, scroll programmatically to a specific position
-        scrollView.post(() -> {
-            scrollView.scrollTo(0, 0);  // Scroll to the top (or any position you want)
-        });
+
     }
 }

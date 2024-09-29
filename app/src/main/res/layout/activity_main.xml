@@ -30,7 +30,8 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="520dp"
         android:fontFamily="@font/roboto_condensed"
-        android:text="Confirm" />
+        android:text="Confirm"
+        android:backgroundTint="@color/lighterblue"/>
 
     <TextView
         android:id="@+id/textView"

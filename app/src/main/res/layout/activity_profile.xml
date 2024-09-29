@@ -33,5 +33,6 @@
         android:layout_below="@id/profile_name"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Edit Profile" />
+        android:text="Edit Profile"
+        android:backgroundTint="@color/lighterblue"/>
 </RelativeLayout>
