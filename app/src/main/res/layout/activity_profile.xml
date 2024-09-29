@@ -7,6 +7,14 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+    <ImageView
+        android:id="@+id/profile_button1"
+        android:layout_width="195dp"
+        android:layout_height="165dp"
+        android:background="@color/white"
+        android:src="@drawable/baseline_account_circle_24"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="162dp" />
     <!-- Fixed Top Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/top_toolbar"
@@ -44,15 +52,6 @@
     </androidx.appcompat.widget.Toolbar>
 
     <!-- Fixed Bottom Toolbar -->
-
-    <ImageView
-        android:id="@+id/profile_button1"
-        android:layout_width="195dp"
-        android:layout_height="165dp"
-        android:background="@color/white"
-        android:src="@drawable/baseline_account_circle_24"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="162dp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/bottom_toolbar"
