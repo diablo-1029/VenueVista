@@ -1,8 +1,6 @@
 package com.example.venuevista;
 
 import android.content.Intent;
-import android.graphics.LinearGradient;
-import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +18,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText passwordEditText;
     private Button loginButton;
     private TextView signupLink;
-    private TextView logoText;
     private ImageView togglepassword;
     private boolean isPasswordVisible = false;
 
@@ -33,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password);
         loginButton = findViewById(R.id.login_button);
         signupLink = findViewById(R.id.signup_link);
-        logoText = findViewById(R.id.logo_text);
         togglepassword = findViewById(R.id.toggle_password);
 
         togglepassword.setOnClickListener(new View.OnClickListener() {
@@ -53,16 +49,6 @@ public class LoginActivity extends AppCompatActivity {
                 passwordEditText.setSelection(passwordEditText.getText().length());
             }
         });
-
-        // Create a LinearGradient for the text
-        Shader shader = new LinearGradient(0, 0, 0, logoText.getTextSize(),
-                ContextCompat.getColor(this, R.color.blue),
-                ContextCompat.getColor(this, R.color.lightblue),
-                Shader.TileMode.CLAMP);
-
-        // Apply the shader to the TextView's paint
-        logoText.getPaint().setShader(shader);
-        logoText.setTextSize(50);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

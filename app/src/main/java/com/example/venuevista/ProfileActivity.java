@@ -2,36 +2,37 @@ package com.example.venuevista;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private ImageView profilePicture;
-    private TextView profileName;
-    private Button editprofileButton;
+    private ImageButton profileButton;
 
     @Override
-    protected void onCreate(Bundle saveInstanceState){
-        super.onCreate(saveInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {  // Fixed parameter name
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        profilePicture = findViewById(R.id.profile_picture);
-        profileName = findViewById(R.id.profile_name);
-        editprofileButton = findViewById(R.id.edit_profile_button);
+        ImageView backButton = findViewById(R.id.back_button);
+        profileButton = findViewById(R.id.profile_button);  // Initialize the profileButton
 
-        //add function to edit profile
-        editprofileButton.setOnClickListener(new View.OnClickListener() {
+        // Add function to edit profile
+        profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //edit profile button click
-                //ADD more activity here optional
+                // Edit profile button click
+                // ADD more activity here optional
             }
         });
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();  // Closes the current activity and returns to the previous one
+            }
+        });
     }
-
 }

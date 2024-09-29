@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -10,50 +9,14 @@
     <!-- Fixed Top Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/top_toolbar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/lightblue"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageView
-            android:id="@+id/back_button"
-            android:layout_width="19dp"
-            android:layout_height="19dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginLeft="10dp"
-            android:contentDescription="Back"
-            android:background="@drawable/baseline_arrow_back_ios_24"/>
-
-        <!-- Profile Information Text -->
-        <TextView
-            android:id="@+id/profile_info_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Profile Information"
-            android:fontFamily="@font/bree_serif"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-
-    </androidx.appcompat.widget.Toolbar>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Fixed Bottom Toolbar -->
-
-    <ImageView
-        android:id="@+id/profile_button1"
-        android:layout_width="195dp"
-        android:layout_height="165dp"
-        android:background="@color/white"
-        android:src="@drawable/baseline_account_circle_24"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="162dp" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/bottom_toolbar"
         android:layout_width="0dp"
@@ -70,8 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/lightblue"
-            android:src="@drawable/baseline_account_circle_24"
-            android:layout_marginStart="70dp"/>
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/baseline_account_circle_24"/>
 
         <!-- Home Button -->
         <ImageButton
@@ -79,8 +42,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/lightblue"
+            android:layout_marginLeft="70dp"
             android:src="@drawable/baseline_home_24"
-            android:layout_marginStart="70dp"
             app:layout_constraintStart_toEndOf="@id/profile_button"/>
 
         <!-- Calendar Button -->
@@ -89,8 +52,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/lightblue"
+            android:layout_marginLeft="70dp"
             android:src="@drawable/baseline_calendar_month_24"
-            android:layout_marginStart="70dp"
             app:layout_constraintStart_toEndOf="@id/home_icon"/>
 
     </androidx.appcompat.widget.Toolbar>

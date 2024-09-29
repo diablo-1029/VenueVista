@@ -2,18 +2,54 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue">
+    android:background="@color/white">
 
+    <!-- FrameLayout without layout_weight -->
+    <FrameLayout
+        android:layout_width="404dp"
+        android:layout_height="725dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/welcome_rounded_corner">
 
-    <!-- Welcome Text -->
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Welcome to VenueVista"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        <!-- Welcome Text inside FrameLayout -->
+
+        <FrameLayout
+            android:layout_width="348dp"
+            android:layout_height="666dp"
+            android:layout_gravity="center"
+            android:background="@drawable/welcome_rounded_corner2">
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_condensed"
+                android:text="Welcome\n      to"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="350dp"
+                android:fontFamily="@font/bree_serif"
+                android:gravity="center"
+                android:text="VenueVista"
+                android:textColor="@color/black"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="390dp"
+                android:fontFamily="@font/roboto_condensed"
+                android:gravity="center"
+                android:text="MAKE YOUR BOOKING EASY"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </FrameLayout>
+    </FrameLayout>
+
 </RelativeLayout>

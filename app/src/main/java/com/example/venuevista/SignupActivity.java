@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class SignupActivity extends AppCompatActivity {
     private ImageView toggleconfirmpassword;
     private boolean isPasswordVisible = false;
     private boolean isConfirmPasswordVisible = false;
+    private TextView loginLink;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -36,6 +38,7 @@ public class SignupActivity extends AppCompatActivity {
         signupButton = findViewById(R.id.signup_button);
         togglepassword = findViewById(R.id.toggle_password);
         toggleconfirmpassword = findViewById(R.id.toggle_confirm_password);
+        loginLink = findViewById(R.id.login_link);
 
         togglepassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,5 +85,14 @@ public class SignupActivity extends AppCompatActivity {
                 finish();//to close the signup and go on mainactivity
             }
         });
+
+        loginLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignupActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
