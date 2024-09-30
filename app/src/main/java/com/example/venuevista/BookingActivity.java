@@ -34,7 +34,7 @@ public class BookingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Handle profile button click
-                Intent intent = new Intent(BookingActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(BookingActivity.this, MainProfileActivity.class);
                 startActivity(intent);
             }
         });

@@ -65,7 +65,8 @@
             android:hint="Username"
             android:padding="10dp"
             android:textColorHint="@color/grey"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/signup_email"
@@ -78,7 +79,8 @@
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="10dp"
-            android:textColorHint="@color/grey" />
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -123,7 +125,8 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:textColorHint="@color/grey" />
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
 
         <ImageView
             android:id="@+id/toggle_password"
@@ -158,7 +161,8 @@
             android:hint="Confirm Password"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:textColorHint="@color/grey" />
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
 
         <ImageView
             android:id="@+id/toggle_confirm_password"
@@ -172,7 +176,7 @@
 
         <Button
             android:id="@+id/signup_button"
-            android:layout_width="120dp"
+            android:layout_width="150dp"
             android:layout_height="48dp"
             android:layout_marginTop="170dp"
             android:fontFamily="@font/roboto_condensed"
@@ -182,7 +186,9 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:backgroundTint="@color/lighterblue"
-            android:elevation="20dp" />
+            android:elevation="20dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <!-- For bold letter -->
         <LinearLayout

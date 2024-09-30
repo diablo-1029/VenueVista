@@ -66,7 +66,8 @@
             android:hint="Username"
             android:inputType="textEmailAddress"
             android:padding="10dp"
-            android:textColorHint="@color/grey" />
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -89,7 +90,8 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:textColorHint="@color/grey" />
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/forgot_password"
@@ -115,7 +117,7 @@
 
         <Button
             android:id="@+id/login_button"
-            android:layout_width="120dp"
+            android:layout_width="150dp"
             android:layout_height="48dp"
             android:layout_marginTop="130dp"
             android:fontFamily="@font/roboto_condensed"
@@ -125,7 +127,9 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:backgroundTint="@color/lighterblue"
-            android:elevation="10dp" />
+            android:elevation="10dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <!-- For bold letter -->
         <LinearLayout

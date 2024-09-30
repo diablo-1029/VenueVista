@@ -366,5 +366,8 @@
         android:hint="Search"
         android:inputType="text"
         android:padding="9dp"
-        android:textColorHint="@color/grey"/>
+        android:textColorHint="@color/grey"
+        android:textColor="@color/black"
+        android:clickable="true"
+        android:focusable="true"/>
 </RelativeLayout>

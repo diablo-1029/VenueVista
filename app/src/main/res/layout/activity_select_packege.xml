@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white">
 
     <LinearLayout
@@ -29,11 +30,54 @@
             android:layout_marginLeft="25dp"
             android:textStyle="bold"/>
 
+        <!--boxes1-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box1"
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/home_discover"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="20dp">
+
+            <!--CONTENT inside the box of image and textview-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--image inside the cardview-->
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="108dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:contentDescription="OUTING"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/outing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_condensed"
+                    android:gravity="center"
+                    android:text="OUTING"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
         <!-- Empty top half -->
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5" /> <!-- Empty top half -->
+            android:layout_weight="0.2" /> <!-- Empty top half -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"

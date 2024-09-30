@@ -27,12 +27,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="130dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/bree_serif"
         android:text="Profile Information"
         android:textColor="@color/black"
         android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/edit_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="360dp"
+        android:background="@drawable/baseline_edit_24" />
 
     <ImageView
         android:id="@+id/calendar"
@@ -44,11 +53,78 @@
         android:src="@drawable/baseline_account_circle_24" />
 
     <FrameLayout
-        android:layout_width="392dp"
-        android:layout_height="400dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="380dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="250dp"
         android:background="@drawable/booking_rounded">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/bree_serif"
+            android:padding="10dp"
+            android:text="First Name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/bree_serif"
+            android:padding="10dp"
+            android:text="Middle Name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="130dp"
+            android:fontFamily="@font/bree_serif"
+            android:padding="10dp"
+            android:text="Last Name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="190dp"
+            android:fontFamily="@font/bree_serif"
+            android:padding="10dp"
+            android:text="Contact Number"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="250dp"
+            android:fontFamily="@font/bree_serif"
+            android:padding="10dp"
+            android:text="Email Address"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
 
     </FrameLayout>
 

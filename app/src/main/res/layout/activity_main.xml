@@ -14,20 +14,12 @@
         android:layout_height="wrap_content"
         android:background="@color/lightblue"/>
 
-    <Button
-        android:id="@+id/main2_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go"
-        android:fontFamily="@font/roboto_condensed"
-        android:layout_marginTop="520dp"
-        android:layout_marginLeft="50dp" />
 
     <Button
         android:id="@+id/home_button"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="520dp"
         android:fontFamily="@font/roboto_condensed"
         android:text="Confirm"
@@ -49,9 +41,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:text="Venue"
-        android:fontFamily="@font/roboto"
+        android:fontFamily="@font/righteous_regular"
         android:textColor="@color/lightblue"
         android:layout_marginTop="160dp"/>
 
@@ -97,7 +89,9 @@
         android:layout_marginTop="250dp"
         android:background="@drawable/rounded_corner2"
         android:padding="10dp"
-        android:hint="" />
+        android:hint="Enter Category"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/choose1"
@@ -107,7 +101,7 @@
         android:layout_marginTop="350dp"
         android:background="@drawable/rounded_corner2"
         android:padding="10dp"
-        android:hint="dd/mm/yy"
+        android:hint=""
         android:textColorHint="@color/grey"/>
 
     <EditText
@@ -118,7 +112,7 @@
         android:layout_marginTop="350dp"
         android:background="@drawable/rounded_corner2"
         android:padding="10dp"
-        android:hint="dd/mm/yy"
+        android:hint=""
         android:textColorHint="@color/grey"/>
 
     <TextView
@@ -140,7 +134,9 @@
         android:layout_marginTop="440dp"
         android:background="@drawable/rounded_corner2"
         android:padding="10dp"
-        android:hint=""/>
+        android:hint="Enter Location"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/black"/>
 
 
 </RelativeLayout>
