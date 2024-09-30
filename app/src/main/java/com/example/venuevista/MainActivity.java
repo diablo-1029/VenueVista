@@ -23,17 +23,10 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        Button Main2button = findViewById(R.id.main2_button);
+
         homeButton =findViewById(R.id.home_button);
 
-        Main2button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //navigate to Main2Activity
-                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-                startActivity(intent);
-            }
-        });
+
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -13,6 +13,7 @@ public class HomeActivity extends AppCompatActivity {
     private ImageButton profileButton;
     private ImageView image1;
     private ImageButton homeIcon;
+    private ImageButton calendarIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,8 @@ public class HomeActivity extends AppCompatActivity {
         searchBar = findViewById(R.id.search_bar);
         profileButton = findViewById(R.id.profile_button);
         image1 = findViewById(R.id.image1);
-        homeIcon =findViewById(R.id.home_icon);
+        homeIcon = findViewById(R.id.home_icon);
+        calendarIcon = findViewById(R.id.calendar_icon);
 
 
         image1.setOnClickListener(new View.OnClickListener() {
@@ -45,10 +47,10 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        homeIcon.setOnClickListener(new View.OnClickListener() {
+        calendarIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,HomeActivity.class);
+                Intent intent = new Intent(HomeActivity.this,BookingActivity.class);
                 startActivity(intent);
             }
         });
