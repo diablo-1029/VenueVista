@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -21,6 +22,10 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView togglepassword;
     private boolean isPasswordVisible = false;
 
+    // Hardcoded credentials for demo purposes
+    private String validUsername = "user123";
+    private String validPassword = "pass123";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         signupLink = findViewById(R.id.signup_link);
         togglepassword = findViewById(R.id.toggle_password);
 
+        // Toggle password visibility
         togglepassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,24 +51,32 @@ public class LoginActivity extends AppCompatActivity {
                     togglepassword.setImageResource(R.drawable.baseline_visibility_24);
                 }
                 isPasswordVisible = !isPasswordVisible;
-                // Move cursor to the end of text
                 passwordEditText.setSelection(passwordEditText.getText().length());
             }
         });
 
+        // login required
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Change the color of the button
-                loginButton.setBackgroundColor(ContextCompat.getColor(LoginActivity.this, R.color.blue));
+                String enteredUsername = usernameEditText.getText().toString();
+                String enteredPassword = passwordEditText.getText().toString();
 
-                // Handle login logic here
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish(); // To close the login and go to home
+                // Check if credentials match
+                if (enteredUsername.equals(validUsername) && enteredPassword.equals(validPassword)) {
+                    // Successful login
+                    Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish(); // Close the login activity and go to home
+                } else {
+                    // Invalid login
+                    Toast.makeText(LoginActivity.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
+        // Navigate to the Signup page
         signupLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
