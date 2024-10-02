@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (enteredUsername.equals(validUsername) && enteredPassword.equals(validPassword)) {
                     // Successful login
                     Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish(); // Close the login activity and go to home
                 } else {

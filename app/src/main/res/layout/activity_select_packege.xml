@@ -89,7 +89,16 @@
                 android:layout_width="300dp"
                 android:layout_height="375dp"
                 android:layout_gravity="center"
-                android:text="PAVILION\n\nMore info:\nCan accommodate up to 20 pax\nPrice: Php 25,000\n\n•Dishes (6-8): Appetizer, Grilled meat, Seafood, Vegetable, Soup, Dessert (with rice)\n•Drinks: Water, Soft drinks and/or juice, Alcoholic drinks"
+                android:text="PAVILION"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/bree_serif"/>
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="More info:\nCan accommodate up to 20 pax\nPrice: Php 25,000\n\n•Dishes (6-8): Appetizer, Grilled meat, Seafood, Vegetable, Soup, Dessert (with rice)\n•Drinks: Water, Soft drinks and/or juice, Alcoholic drinks"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 

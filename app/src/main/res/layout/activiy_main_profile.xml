@@ -80,21 +80,22 @@
 
     <TextView
         android:id="@+id/accountname"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Account Name"
-        android:textSize="15sp"
-        android:fontFamily="@font/bree_serif"
         android:layout_below="@+id/profile"
-        android:gravity="center"
-        android:textColor="@color/black"/>
+        android:fontFamily="@font/bree_serif"
+        android:text="Account Name"
+        android:padding="5dp"
+        android:layout_marginLeft="160dp"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/myprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/accountname"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="130dp"
         android:fontFamily="@font/bree_serif"
         android:layout_marginLeft="140dp"
         android:text="My Profile"
@@ -153,12 +154,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/box2"
-            android:background="@color/lightblue"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="15dp"
             android:src="@drawable/baseline_logout_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Logout Icon"
             android:clickable="true"
             android:focusable="true"/>
+
 
         <TextView
             android:id="@+id/log_out"
