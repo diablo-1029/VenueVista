@@ -42,7 +42,7 @@
             android:gravity="center"
             android:text="Sign up"
             android:textColor="@color/lightblue4"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
             android:fontFamily="@font/roboto_condensed"
             android:text="Username"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/signup_username"
@@ -90,7 +90,7 @@
             android:fontFamily="@font/roboto_condensed"
             android:text="Email"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
             android:fontFamily="@font/roboto_condensed"
             android:text="Password"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/forgot_password"
@@ -147,7 +147,7 @@
             android:fontFamily="@font/roboto_condensed"
             android:text="Confirm Password"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
 
 
         <EditText
@@ -212,7 +212,7 @@
                 android:layout_height="wrap_content"
                 android:text="Log in"
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="13sp" />
         </LinearLayout>
 
     </FrameLayout>

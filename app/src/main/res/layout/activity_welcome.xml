@@ -29,7 +29,7 @@
                 android:fontFamily="@font/roboto_condensed"
                 android:text="Welcome\n      to"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:gravity="center"
                 android:text="VenueVista"
                 android:textColor="@color/black"
-                android:textSize="32sp" />
+                android:textSize="38sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -49,7 +49,7 @@
                 android:gravity="center"
                 android:text="MAKE YOUR BOOKING EASY"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
         </FrameLayout>
     </FrameLayout>

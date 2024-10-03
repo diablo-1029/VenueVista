@@ -1,14 +1,17 @@
 package com.example.venuevista;
 
-import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -76,25 +79,48 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
+        // Add a TextWatcher to the password EditText to monitor changes
+        signupPasswordEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // No action needed before text is changed
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int position, int before, int count) {
+                // Check password length as it's being typed
+                if (s.length() < 8) {
+                    showPasswordTooShortDialog(); // Show dialog if password is less than 8 characters
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                // No action needed after text is changed
+            }
+        });
+
         // Sign-up for authentication/required
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Get user input
-                String username = signupUsernameEditText.getText().toString();
-                String email = signupEmailEditText.getText().toString();
+                String username = signupUsernameEditText.getText().toString().trim();
+                String email = signupEmailEditText.getText().toString().trim();
                 String password = signupPasswordEditText.getText().toString();
                 String confirmPassword = signupConfirmPasswordEditText.getText().toString();
 
                 // Validate the inputs
                 if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-                    Toast.makeText(SignupActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
+                    showAlertDialog("All fields are required", "Please fill in all the fields.");
                 } else if (!password.equals(confirmPassword)) {
-                    Toast.makeText(SignupActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    showAlertDialog("Passwords do not match", "Please ensure both passwords match.");
+                } else if (password.length() < 8) {
+                    showAlertDialog("Password Too Short", "Password must be at least 8 characters long.");
                 } else {
                     // Show a success message and navigate to the main screen
                     Toast.makeText(SignupActivity.this, "Signup Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SignupActivity.this,HomeActivity.class);
+                    Intent intent = new Intent(SignupActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish(); // Close signup and go to main activity
                 }
@@ -109,5 +135,25 @@ public class SignupActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    // Method to show an alert dialog with a title and message
+    private void showAlertDialog(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(SignupActivity.this);
+        builder.setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss(); // Dismiss the dialog when "OK" is clicked
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    // Method to show the dialog for passwords shorter than 8 characters
+    private void showPasswordTooShortDialog() {
+        showAlertDialog("Password Too Short", "Password must be at least 8 characters long.");
     }
 }
