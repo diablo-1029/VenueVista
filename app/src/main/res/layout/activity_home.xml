@@ -50,8 +50,6 @@
                 android:fontFamily="@font/righteous_regular"/>
 
 
-
-
             <!--boxes1-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/box1"
@@ -369,7 +367,7 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/rounded_corner2"
         android:drawableEnd="@drawable/baseline_search_24"
-        android:hint="Search"
+        android:hint="Booking Venue"
         android:inputType="text"
         android:padding="9dp"
         android:textColorHint="@color/grey"

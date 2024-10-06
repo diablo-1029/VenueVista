@@ -21,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView image5;
     private ImageView image6;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +94,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        searchBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
