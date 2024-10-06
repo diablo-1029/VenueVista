@@ -9,11 +9,17 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
+
     private EditText searchBar;
     private ImageButton profileButton;
-    private ImageView image1;
     private ImageButton homeIcon;
     private ImageButton calendarIcon;
+    private ImageView image1;
+    private ImageView image2;
+    private ImageView image3;
+    private ImageView image4;
+    private ImageView image5;
+    private ImageView image6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +29,14 @@ public class HomeActivity extends AppCompatActivity {
         // Initialize all the views
         searchBar = findViewById(R.id.search_bar);
         profileButton = findViewById(R.id.profile_button);
-        image1 = findViewById(R.id.image1);
         homeIcon = findViewById(R.id.home_icon);
         calendarIcon = findViewById(R.id.calendar_icon);
+        image1 = findViewById(R.id.image1);
+        image2 = findViewById(R.id.image2);
+        image3 = findViewById(R.id.image3);
+        image4 = findViewById(R.id.image4);
+        image5 = findViewById(R.id.image5);
+        image6 = findViewById(R.id.image6);
 
 
         image1.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +47,52 @@ public class HomeActivity extends AppCompatActivity {
               startActivity(intent);
             }
         });
+
+        image2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Actions to click images
+                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        image3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Actions to click images
+                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        image4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Actions to click images
+                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        image5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Actions to click images
+                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        image6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Actions to click images
+                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override

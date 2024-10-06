@@ -52,7 +52,7 @@
             android:fontFamily="@font/roboto_condensed"
             android:text="Username"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
         <EditText
             android:id="@+id/signup_username"
@@ -90,7 +90,7 @@
             android:fontFamily="@font/roboto_condensed"
             android:text="Email"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
             android:fontFamily="@font/roboto_condensed"
             android:text="Password"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/forgot_password"
@@ -147,7 +147,7 @@
             android:fontFamily="@font/roboto_condensed"
             android:text="Confirm Password"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
 
         <EditText
@@ -178,7 +178,7 @@
             android:id="@+id/signup_button"
             android:layout_width="150dp"
             android:layout_height="48dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="130dp"
             android:fontFamily="@font/roboto_condensed"
             android:padding="1dp"
             android:text="Signup"
@@ -195,7 +195,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="170dp"
             android:orientation="horizontal"
             android:paddingTop="16dp">
 
@@ -204,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:text="Don't have an account? "
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/login_link"
@@ -212,7 +212,7 @@
                 android:layout_height="wrap_content"
                 android:text="Log in"
                 android:textColor="@color/black"
-                android:textSize="13sp" />
+                android:textSize="15sp" />
         </LinearLayout>
 
     </FrameLayout>

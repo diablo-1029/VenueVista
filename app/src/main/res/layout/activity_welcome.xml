@@ -7,17 +7,16 @@
 
     <!-- FrameLayout without layout_weight -->
     <FrameLayout
-        android:layout_width="335dp"
-        android:layout_height="625dp"
+        android:layout_width="380dp"
+        android:layout_height="800dp"
         android:layout_centerInParent="true"
-
         android:background="@drawable/welcome_rounded_corner">
 
         <!-- Welcome Text inside FrameLayout -->
 
         <FrameLayout
-            android:layout_width="290dp"
-            android:layout_height="585dp"
+            android:layout_width="340dp"
+            android:layout_height="760dp"
             android:layout_gravity="center"
             android:background="@drawable/welcome_rounded_corner2">
 
@@ -34,7 +33,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="320dp"
+                android:layout_marginTop="400dp"
                 android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="VenueVista"
@@ -44,7 +43,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="370dp"
+                android:layout_marginTop="450dp"
                 android:fontFamily="@font/roboto_condensed"
                 android:gravity="center"
                 android:text="MAKE YOUR BOOKING EASY"
