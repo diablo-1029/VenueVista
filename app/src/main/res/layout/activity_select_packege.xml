@@ -180,16 +180,13 @@
             </androidx.cardview.widget.CardView>
 
 
-
-
-
-
         </FrameLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom">
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15dp">
 
             <!-- Other views like TextView or CardView go here -->
 
