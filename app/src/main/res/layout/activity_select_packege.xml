@@ -110,16 +110,18 @@
                 android:layout_marginLeft="55dp"
                 android:layout_marginRight="55dp"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="4dp">
+                app:cardElevation="4dp"
+                android:background="@color/white">
 
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:text="Event type:\n< Birthday ( Debut ), Wedding, Anniversary, Outing, Day Out >"
+                    android:text="Event type:\n Birthday ( Debut ), Wedding, Anniversary, Outing, Day Out "
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:fontFamily="@font/bree_serif"
-                    android:padding="16dp" />
+                    android:padding="16dp"
+                    android:background="@color/white"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -134,11 +136,12 @@
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:text="Number of guests:\n< 0 ~ 100 > guests\n< 5 ~ 30 > tables ?"
+                    android:text="Number of guests:\n 0 ~ 100  guests\n 5 ~ 30  tables ?"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:fontFamily="@font/bree_serif"
-                    android:padding="16dp" />
+                    android:padding="16dp"
+                    android:background="@color/white"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -153,11 +156,12 @@
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:text="Speaker:\n< Sound System w/out >"
+                    android:text="Speaker:\n Sound System w/out "
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:fontFamily="@font/bree_serif"
-                    android:padding="16dp" />
+                    android:padding="16dp"
+                    android:background="@color/white"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -172,11 +176,12 @@
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:text="MC:\n< Yes No >"
+                    android:text="MC:\n Yes No "
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:fontFamily="@font/bree_serif"
-                    android:padding="16dp" />
+                    android:padding="16dp"
+                    android:background="@color/white"/>
             </androidx.cardview.widget.CardView>
 
 
