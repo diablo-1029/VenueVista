@@ -21,7 +21,6 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView image5;
     private ImageView image6;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,83 +38,54 @@ public class HomeActivity extends AppCompatActivity {
         image5 = findViewById(R.id.image5);
         image6 = findViewById(R.id.image6);
 
+        // Set tags for images to identify package types
+        image1.setTag("outing");
+        image2.setTag("birthday");
+        image3.setTag("wedding");
+        image4.setTag("corporate");
+        image5.setTag("concert");
+        image6.setTag("party");
 
-        image1.setOnClickListener(new View.OnClickListener() {
+        // Set click listener for images
+        View.OnClickListener imageClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Actions to click images
-              Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
-              startActivity(intent);
-            }
-        });
-
-        image2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
+                Intent intent = new Intent(HomeActivity.this, SelectPackageActivity.class);
+                intent.putExtra("package_type", (String) view.getTag());
                 startActivity(intent);
             }
-        });
+        };
 
-        image3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
-                startActivity(intent);
-            }
-        });
+        image1.setOnClickListener(imageClickListener);
+        image2.setOnClickListener(imageClickListener);
+        image3.setOnClickListener(imageClickListener);
+        image4.setOnClickListener(imageClickListener);
+        image5.setOnClickListener(imageClickListener);
+        image6.setOnClickListener(imageClickListener);
 
-        image4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        image5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        image6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Actions to click images
-                Intent intent = new Intent(HomeActivity.this,SelectPackageActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        // Set click listener for search bar
         searchBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,MainActivity.class);
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
 
+        // Set click listener for profile button
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle profile button click
                 Intent intent = new Intent(HomeActivity.this, MainProfileActivity.class);
                 startActivity(intent);
             }
         });
 
-
+        // Set click listener for calendar icon
         calendarIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this,BookingActivity.class);
+                Intent intent = new Intent(HomeActivity.this, BookingActivity.class);
                 startActivity(intent);
             }
         });
