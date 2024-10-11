@@ -3,7 +3,6 @@ package com.example.venuevista;
 import org.json.JSONObject;
 import org.json.JSONException;
 import android.util.Log;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,8 +28,8 @@ public class SignupActivity extends AppCompatActivity {
     private EditText signupPasswordEditText;
     private EditText signupConfirmPasswordEditText;
     private Button signupButton;
-    private ImageView togglepassword;
-    private ImageView toggleconfirmpassword;
+    private ImageView togglePassword;
+    private ImageView toggleConfirmPassword;
     private boolean isPasswordVisible = false;
     private boolean isConfirmPasswordVisible = false;
     private TextView loginLink;
@@ -47,22 +45,20 @@ public class SignupActivity extends AppCompatActivity {
         signupPasswordEditText = findViewById(R.id.signup_password);
         signupConfirmPasswordEditText = findViewById(R.id.signup_confirm_password);
         signupButton = findViewById(R.id.signup_button);
-        togglepassword = findViewById(R.id.toggle_password);
-        toggleconfirmpassword = findViewById(R.id.toggle_confirm_password);
+        togglePassword = findViewById(R.id.toggle_password);
+        toggleConfirmPassword = findViewById(R.id.toggle_confirm_password);
         loginLink = findViewById(R.id.login_link);
 
         // Toggle password visibility for password
-        togglepassword.setOnClickListener(new View.OnClickListener() {
+        togglePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (isPasswordVisible) {
-                    // Hide password
                     signupPasswordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                    togglepassword.setImageResource(R.drawable.baseline_visibility_off_24);
+                    togglePassword.setImageResource(R.drawable.baseline_visibility_off_24);
                 } else {
-                    // Show password
-                    signupPasswordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    togglepassword.setImageResource(R.drawable.baseline_visibility_24);
+                    signupPasswordEditText.setTransformationMethod(null); // Show text
+                    togglePassword.setImageResource(R.drawable.baseline_visibility_24);
                 }
                 isPasswordVisible = !isPasswordVisible;
                 signupPasswordEditText.setSelection(signupPasswordEditText.getText().length());
@@ -70,17 +66,15 @@ public class SignupActivity extends AppCompatActivity {
         });
 
         // Toggle password visibility for confirm password
-        toggleconfirmpassword.setOnClickListener(new View.OnClickListener() {
+        toggleConfirmPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (isConfirmPasswordVisible) {
-                    // Hide password
                     signupConfirmPasswordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                    toggleconfirmpassword.setImageResource(R.drawable.baseline_visibility_off_24);
+                    toggleConfirmPassword.setImageResource(R.drawable.baseline_visibility_off_24);
                 } else {
-                    // Show password
-                    signupConfirmPasswordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    toggleconfirmpassword.setImageResource(R.drawable.baseline_visibility_24);
+                    signupConfirmPasswordEditText.setTransformationMethod(null); // Show text
+                    toggleConfirmPassword.setImageResource(R.drawable.baseline_visibility_24);
                 }
                 isConfirmPasswordVisible = !isConfirmPasswordVisible;
                 signupConfirmPasswordEditText.setSelection(signupConfirmPasswordEditText.getText().length());
@@ -170,9 +164,7 @@ public class SignupActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             // Here you can handle the result returned by the server
             try {
-                // Log the result for debugging purposes
                 Log.d("SignupResult", "Result: " + result);
-
                 JSONObject jsonResponse = new JSONObject(result);
                 boolean success = jsonResponse.getBoolean("success");
                 String message = jsonResponse.getString("message");

@@ -13,6 +13,9 @@ import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -31,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);  // Make sure this matches your XML filename
+        setContentView(R.layout.activity_login);  // Ensure this matches your XML filename
 
         // Initializing views
         usernameEditText = findViewById(R.id.username);
@@ -62,8 +65,14 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username = usernameEditText.getText().toString();
-                String password = passwordEditText.getText().toString();
+                String username = usernameEditText.getText().toString().trim();
+                String password = passwordEditText.getText().toString().trim();
+
+                // Input validation
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Both fields are required!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 // Call AsyncTask to perform login
                 new LoginTask().execute(username, password);
@@ -87,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
             String password = params[1];
 
             try {
-                URL url = new URL("http://10.0.2.2/venuevista/login.php"); // Adjust the URL as needed
+                URL url = new URL("http://10.0.2.2/VenueVista2/login.php"); // Adjust the URL as needed
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("Content-Type", "application/json; utf-8");
@@ -104,18 +113,19 @@ public class LoginActivity extends AppCompatActivity {
 
                 // Handle the response
                 int responseCode = conn.getResponseCode();
+                StringBuilder response = new StringBuilder();
                 if (responseCode == HttpURLConnection.HTTP_OK) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                    StringBuilder response = new StringBuilder();
                     String line;
                     while ((line = reader.readLine()) != null) {
                         response.append(line);
                     }
                     reader.close();
-                    return response.toString(); // Return the response from the server
                 } else {
-                    return "Login failed: " + responseCode;
+                    return "Error: " + responseCode;
                 }
+
+                return response.toString(); // Return the response from the server
             } catch (Exception e) {
                 return "Error: " + e.getMessage();
             }
@@ -123,14 +133,22 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            // Here you can handle the result returned by the server
-            Toast.makeText(LoginActivity.this, result, Toast.LENGTH_LONG).show();
+            // Handle the result returned by the server
+            try {
+                JSONObject jsonResponse = new JSONObject(result);
+                boolean success = jsonResponse.getBoolean("success");
+                String message = jsonResponse.getString("message");
 
-            // Optional: Navigate to the HomeActivity if login is successful
-            if (result.contains("success")) { // Adjust this condition based on your PHP response
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
-                finish();
+                Toast.makeText(LoginActivity.this, message, Toast.LENGTH_LONG).show();
+
+                // Optional: Navigate to the HomeActivity if login is successful
+                if (success) {
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            } catch (JSONException e) {
+                Toast.makeText(LoginActivity.this, "Error parsing response: " + e.getMessage(), Toast.LENGTH_LONG).show();
             }
         }
     }
